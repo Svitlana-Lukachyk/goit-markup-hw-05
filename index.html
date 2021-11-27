@@ -23,13 +23,15 @@
                     </ul>
                 </nav>
                 <ul class="header-list">
-                    <li class="header-item"><a class="header-contacts link" href="mailto:info@devstudio.com" lang="en">
+                    <li class="header-item">
+                        <a class="header-contacts link" href="mailto:info@devstudio.com" lang="en">
                         <svg class="header-icon" width="16" height="12">
                             <use href="./images/icons.svg#icon-envelope"></use>
                         </svg>
                         info@devstudio.com</a>
                     </li>
-                    <li class="header-item"><a class="header-contacts link" href="tel:+380961111111">
+                    <li class="header-item">
+                        <a class="header-contacts link" href="tel:+380961111111">
                         <svg class="header-icon" width="10" height="16">
                             <use href="./images/icons.svg#icon-smartphone"></use>
                         </svg>
@@ -42,7 +44,16 @@
             <section class="hero-section">
                 <div class="container">
                     <h1 class="hero-title centered">Эффективные решения для вашего бизнеса</h1>
-                    <button class="button hero-btn" type="button">Заказать услугу</button>
+                    <button  type="button" class="button hero-btn" data-modal-open>Заказать услугу</button>
+                    <div class="backdrop" data-modal>
+                        <div class="modal">
+                            <button type="button" data-modal-close>
+                            <svg class="exit-btn" width=30px height=30px>
+                                <use href="./images/icons.svg#icon-close"></use>
+                            </svg>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </section>
             <section class="section">
@@ -92,9 +103,24 @@
                 <div class="container">
                     <h2 class="about-us-title">Чем мы занимаемся</h2>
                     <ul class="about-us-list">
-                        <li class="about-us-item"><img src="./images/box1.jpg" alt="Человек пишет код" width="370"></li>
-                        <li class="about-us-item"><img src="./images/box2.jpg" alt="Женщина работает на ноутбуке" width="370"></li>
-                        <li class="about-us-item"><img src="./images/box3.jpg" alt="женщина держит в руках планшет" width="370"></li>
+                        <li class="about-us-item">
+                            <div class="about-us-label">
+                                <img src="./images/box1.jpg" alt="Человек пишет код" width="370">
+                                <p class="about-us-text">Десктопные приложения</p>
+                            </div>
+                        </li>
+                        <li class="about-us-item">
+                            <div class="about-us-label">
+                                <img src="./images/box2.jpg" alt="Женщина работает на ноутбуке" width="370">
+                                <p class="about-us-text">Мобильные приложения</p>
+                            </div>
+                        </li>
+                        <li class="about-us-item">
+                            <div class="about-us-label">
+                                <img src="./images/box3.jpg" alt="Женщина держит в руках планшет" width="370">
+                                <p class="about-us-text">Дизайнерские решения</p>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </section>
@@ -350,5 +376,6 @@
                 </div>
             </div>
         </footer>
+        <script src="./js/modal.js"></script>
     </body>
 </html>
